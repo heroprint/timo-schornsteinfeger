@@ -92,7 +92,7 @@ nav{margin-left:0;justify-content:center;gap:30px}nav a{font-size:14px}
 @media(max-width:1100px){.header-inner{grid-template-columns:180px minmax(0,1fr) auto 44px;column-gap:16px}}
 @media(max-width:850px){.header-inner{grid-template-columns:minmax(0,1fr) 44px 44px auto;column-gap:12px}.header-email{grid-column:3}.menu-toggle{grid-column:4}}
 @media(max-width:600px){.header-inner{grid-template-columns:minmax(0,1fr) 44px 44px 44px;column-gap:8px}}
-/* A geographic map with a separate, explicit statement of coverage. */
+/* Illustrated geography with a separate, explicit statement of coverage. */
 .district-map{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);min-width:0}
 .district-map-heading{display:flex;justify-content:space-between;gap:16px;padding:20px 22px;font-size:10px;letter-spacing:1.6px;color:var(--muted)}
 .district-map-heading span:last-child{color:var(--gold)}
@@ -107,3 +107,5 @@ nav{margin-left:0;justify-content:center;gap:30px}nav a{font-size:14px}
 .district-coverage .district-core{margin-bottom:0}
 @media(max-width:850px){.district-section{grid-template-columns:1fr;gap:32px}.district-copy{order:-1}.district-map iframe{height:360px}}
 @media(max-width:600px){.district-map-heading{padding:17px 18px;font-size:9px}.district-map iframe{height:310px}.district-map figcaption{padding:12px 16px}.district-coverage{margin-top:22px}.district-coverage li{font-size:12px}}
+.district-landscape{display:block;width:100%;height:auto;background:#202124}
+.district-illustration figcaption{font-size:10px;border-top:1px solid var(--line);padding-block:18px}
