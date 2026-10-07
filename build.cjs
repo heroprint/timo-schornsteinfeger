@@ -14,7 +14,7 @@ fs.writeFileSync(path.join(output, '.nojekyll'), '');
 // Changed CSS and JavaScript get a new URL so browsers do not reuse old files.
 const htmlPath = path.join(output, 'index.html');
 const html = fs.readFileSync(htmlPath, 'utf8').replace(
-  /(href|src)="(styles\.css|modern\.css|script\.js)"/g,
+  /(href|src)="(styles\.css|modern\.css|script\.js|assets\/logo-light\.svg)"/g,
   (_, attribute, file) => {
     const version = crypto.createHash('sha256').update(fs.readFileSync(path.join(output, file))).digest('hex').slice(0, 12);
     return `${attribute}="${file}?v=${version}"`;
