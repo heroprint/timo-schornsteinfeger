@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 function closeMenu(returnFocus = false) {
@@ -15,8 +16,10 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
   closeMenu();
   if (wasOpen) {
     const target = document.querySelector(link.hash);
-    target.setAttribute('tabindex', '-1');
-    target.focus({ preventScroll: true });
+    if (target) {
+      target.setAttribute('tabindex', '-1');
+      target.focus({ preventScroll: true });
+    }
   }
 }));
 document.addEventListener('keydown', event => {
@@ -25,9 +28,13 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (!event.target.closest('.header')) closeMenu();
 });
-matchMedia('(min-width: 851px)').addEventListener('change', () => closeMenu());
+matchMedia('(min-width: 1101px)').addEventListener('change', () => closeMenu());
 document.querySelectorAll('[data-dialog]').forEach(button => {
-  button.addEventListener('click', () => document.getElementById(button.dataset.dialog).showModal());
+  button.addEventListener('click', () => {
+    const dialog = document.getElementById(button.dataset.dialog);
+    dialog.addEventListener('close', () => button.focus(), { once: true });
+    dialog.showModal();
+  });
 });
 document.querySelectorAll('dialog').forEach(dialog => {
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
