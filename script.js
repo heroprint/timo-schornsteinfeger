@@ -29,22 +29,6 @@ document.addEventListener('click', event => {
   if (!event.target.closest('.header')) closeMenu();
 });
 matchMedia('(min-width: 1101px)').addEventListener('change', () => closeMenu());
-document.querySelectorAll('[data-dialog]').forEach(button => {
-  button.addEventListener('click', () => {
-    const dialog = document.getElementById(button.dataset.dialog);
-    dialog.addEventListener('close', () => button.focus(), { once: true });
-    dialog.showModal();
-  });
-});
-document.querySelectorAll('dialog').forEach(dialog => {
-  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => {
-    if (event.target === dialog) {
-      const rect = dialog.getBoundingClientRect();
-      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-    }
-  });
-});
 const sections = [...document.querySelectorAll('main > section[id]')];
 if ('IntersectionObserver' in window) {
   const sectionObserver = new IntersectionObserver(entries => {
