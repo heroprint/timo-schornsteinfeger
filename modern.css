@@ -59,3 +59,28 @@ nav{margin-left:0;justify-content:center;gap:30px}nav a{font-size:14px}
 @media(max-width:850px){.header-inner{min-height:100px;grid-template-columns:1fr auto auto;gap:18px}.brand{width:180px;height:84px}.menu-toggle{margin:0;justify-self:end;min-width:94px;justify-content:center}nav{justify-content:flex-start;gap:0}html{scroll-padding-top:115px}.modern-hero{padding-top:35px}}
 @media(max-width:600px){.header-inner{width:calc(100% - 40px);min-height:94px;grid-template-columns:1fr auto;gap:16px}.brand{width:170px;height:78px}.menu-toggle{min-width:88px;min-height:44px;padding:10px 12px}.header-phone{display:none}html{scroll-padding-top:108px}.modern-hero{padding-top:28px}}
 @media(max-width:360px){.brand{width:152px;height:72px}.header-inner{gap:12px;min-height:88px}html{scroll-padding-top:102px}}
+/* SVG icons keep the same shape and CSS color on iOS, Android and desktop. */
+.ui-icon{display:inline-block;width:1em;height:1em;vertical-align:-.15em;flex-shrink:0}
+.text-link .ui-icon,.tile-call .ui-icon,.district-tile-bottom .ui-icon{width:20px;height:20px}
+.contact-number .ui-icon{width:30px;height:30px}
+.email .ui-icon{width:18px;height:18px}
+.intro-cross .star-icon{width:1em;height:1em;display:block}
+.round-link .ui-icon{width:23px;height:23px}
+.footer-links>a .ui-icon{width:20px;height:20px}
+.mobile-header-call{display:none}
+@media(max-width:850px){
+  .header-inner{grid-template-columns:minmax(0,1fr) auto auto}
+  .brand{grid-column:1;grid-row:1;max-width:180px;width:100%}
+  .mobile-header-call{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;color:var(--gold)}
+  .mobile-header-call .ui-icon{width:21px;height:21px}
+  .mobile-header-call:hover{background:#ffffff0a;border-color:#c3a36688}
+  .menu-toggle{grid-column:3;grid-row:1}
+  .header-phone{display:none}
+}
+@media(max-width:600px){
+  .header-inner{grid-template-columns:minmax(0,1fr) 44px 44px;gap:10px}
+  .brand{max-width:170px}
+  .menu-toggle{width:44px;min-width:44px;height:44px;padding:0;border-radius:12px}
+  .menu-toggle>span:first-child{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .footer{padding-bottom:35px}
+}
