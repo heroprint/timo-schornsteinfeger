@@ -4,7 +4,7 @@ const crypto = require('node:crypto');
 
 // Publish only website files; local previews and screenshots stay out of Pages.
 const output = path.join(__dirname, 'dist');
-const files = ['index.html', 'styles.css', 'modern.css', 'script.js', 'Logo.jpeg', 'assets/mark.svg'];
+const files = ['index.html', 'styles.css', 'modern.css', 'script.js', 'Logo.jpeg', 'assets/mark.svg', 'assets/logo-light.svg'];
 for (const file of files) {
   const target = path.join(output, file);
   fs.mkdirSync(path.dirname(target), { recursive: true });
