@@ -8,8 +8,8 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var
 .brand{grid-column:1;grid-row:1;width:100%;max-width:170px;height:72px;min-width:48px}
 .brand img{object-fit:contain;transform:none}
 .mobile-header-call,.header-email,.menu-toggle{width:48px;height:48px;min-width:48px;min-height:48px;border-radius:12px;padding:0;display:flex;align-items:center;justify-content:center;grid-row:1}
-.mobile-header-call{grid-column:2;background:var(--gold);color:#151618;border-color:var(--gold)}
-.mobile-header-call:hover{background:#d2b77f;color:#151618}
+.mobile-header-call{grid-column:2;background:transparent;color:var(--gold);border:1px solid var(--line)}
+.mobile-header-call:hover{background:#ffffff0a;border-color:#c3a36688}
 .header-email{grid-column:3}.menu-toggle{grid-column:4;margin:0}
 .menu-toggle>span:first-child{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .header-phone{display:none}
