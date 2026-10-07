@@ -92,3 +92,18 @@ nav{margin-left:0;justify-content:center;gap:30px}nav a{font-size:14px}
 @media(max-width:1100px){.header-inner{grid-template-columns:180px minmax(0,1fr) auto 44px;column-gap:16px}}
 @media(max-width:850px){.header-inner{grid-template-columns:minmax(0,1fr) 44px 44px auto;column-gap:12px}.header-email{grid-column:3}.menu-toggle{grid-column:4}}
 @media(max-width:600px){.header-inner{grid-template-columns:minmax(0,1fr) 44px 44px 44px;column-gap:8px}}
+/* A geographic map with a separate, explicit statement of coverage. */
+.district-map{margin:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);min-width:0}
+.district-map-heading{display:flex;justify-content:space-between;gap:16px;padding:20px 22px;font-size:10px;letter-spacing:1.6px;color:var(--muted)}
+.district-map-heading span:last-child{color:var(--gold)}
+.district-map iframe{display:block;width:100%;height:340px;border:0;background:#e9e7e3}
+.district-map figcaption{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:14px 20px;font-size:10px;line-height:1.6;color:var(--muted)}
+.district-map figcaption a{display:inline-flex;align-items:center;min-height:32px;color:var(--text);text-decoration:underline;text-underline-offset:4px}
+.district-coverage{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.district-coverage h3{font-size:17px;font-weight:500;margin:0 0 10px}
+.district-coverage p{margin-top:0}
+.district-coverage ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:18px 0;padding:0}
+.district-coverage li{border:1px solid #c3a36655;border-radius:8px;padding:7px 12px;font-size:13px;color:var(--text)}
+.district-coverage .district-core{margin-bottom:0}
+@media(max-width:850px){.district-section{grid-template-columns:1fr;gap:32px}.district-copy{order:-1}.district-map iframe{height:360px}}
+@media(max-width:600px){.district-map-heading{padding:17px 18px;font-size:9px}.district-map iframe{height:310px}.district-map figcaption{padding:12px 16px}.district-coverage{margin-top:22px}.district-coverage li{font-size:12px}}
